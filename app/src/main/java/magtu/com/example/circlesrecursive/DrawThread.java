@@ -19,7 +19,7 @@ public class DrawThread extends Thread {
     private long prevTime;
     private Paint paint;
     private boolean runFlag;
-    private float pX, pY;
+    private float pX, pY, pZ;
 
     @SuppressLint("ClickableViewAccessibility")
     DrawThread(SurfaceHolder surfaceHolder, DisplayMetrics metrics) {
@@ -94,7 +94,7 @@ public class DrawThread extends Thread {
         paint.setStrokeWidth(5);
 
         canvas.drawCircle(metrics.widthPixels / 2 + pX,
-                metrics.heightPixels / 2 + pY, radius, paint);
+                metrics.heightPixels / 2 + pY, radius * pZ, paint);
 
         radius *= 0.9f;
         pX *= 0.9f;
@@ -118,6 +118,10 @@ public class DrawThread extends Thread {
      */
     private float reMap(float s, float a1, float a2, float b1, float b2) {
         return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+    }
+
+    public void setPZ(float z) {
+        this.pZ = z * 0.1f;
     }
 
     public void setPX(float plusX) {

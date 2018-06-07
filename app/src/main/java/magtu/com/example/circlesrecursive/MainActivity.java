@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             accelValues = lowPass(sensorEvent.values.clone(), accelValues);
             GameView.gameThread.setPX(accelValues[0]);
             GameView.gameThread.setPY(accelValues[1]);
+            GameView.gameThread.setPZ(accelValues[2]);
         }
     }
 
