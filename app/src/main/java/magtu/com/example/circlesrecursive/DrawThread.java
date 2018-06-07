@@ -1,9 +1,5 @@
 package magtu.com.example.circlesrecursive;
 
-/**
- * Created by Nikita on 01.04.2018.
- */
-
 import android.annotation.SuppressLint;
 import android.graphics.*;
 import android.hardware.SensorEventListener;
@@ -90,8 +86,8 @@ public class DrawThread extends Thread {
         paint.setColor(Color.rgb(
                 new Random().nextInt(255),
                 new Random().nextInt(255),
-                new Random().nextInt(255)
-        ));
+                new Random().nextInt(255))
+        );
         //paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.STROKE);
         paint.setAntiAlias(true);
