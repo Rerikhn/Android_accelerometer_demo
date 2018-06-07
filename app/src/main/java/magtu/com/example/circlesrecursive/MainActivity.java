@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     }
 
+    // Low-pass smooth filtering for accelerometer
     protected float[] lowPass(float[] input, float[] output) {
         if (output == null) return input;
 

@@ -76,7 +76,6 @@ public class DrawThread extends Thread {
         }
     }
 
-
     private void updateFrame() {
         // supporting method for graphics update
         // only for moving objects
@@ -103,7 +102,6 @@ public class DrawThread extends Thread {
         alpha *= 0.93f;
         if (radius >= 1) circles(canvas, paint, radius, pX, pY, alpha);
     }
-
 
     /**
      * This function is remapping line value
